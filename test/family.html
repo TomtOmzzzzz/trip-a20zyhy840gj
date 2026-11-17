@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>TEST · Where are they</title>
+<style>
+body{margin:0;font:17px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;background:#f4f7f6;color:#17302c}
+.w{max-width:1000px;margin:0 auto;padding:16px}
+h1{font-size:clamp(24px,5vw,40px);margin:.2em 0 .1em;line-height:1.15}
+.sub{font-size:clamp(17px,2.6vw,22px);color:#3d5a55}.age{color:#6b827d;font-size:15px;margin:.3em 0 .8em}
+.stale{color:#b4530a;font-weight:700}
+.card{background:#fff;border-radius:14px;padding:12px;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+svg{display:block;width:100%;height:auto}
+.land{fill:#dfeeea}.sea{fill:#fff}.route{fill:none;stroke:#c9b79d;stroke-width:4;stroke-linejoin:round;stroke-linecap:round}
+.ferry{fill:none;stroke:#c9b79d;stroke-width:3;stroke-dasharray:3 6}.night{fill:#0f6b63;stroke:#fff;stroke-width:2}
+.night.done{fill:#8fb8b1}.num{fill:#fff;font:700 13px sans-serif;text-anchor:middle}.via{fill:#17302c}
+.lbl{fill:#17302c;font:600 15px sans-serif}.lbl.minor{fill:#6b827d;font-weight:500;font-size:13px}
+#mk circle.dot{fill:#d9480f;stroke:#fff;stroke-width:3}#mk circle.ring{fill:none;stroke:#d9480f;stroke-width:3;opacity:.7;animation:p 1.8s ease-out infinite;transform-origin:center;transform-box:fill-box}
+#mk text{font:700 17px sans-serif;fill:#d9480f;paint-order:stroke;stroke:#fff;stroke-width:5px}
+@keyframes p{from{transform:scale(.6);opacity:.9}to{transform:scale(2.6);opacity:0}}
+ul{list-style:none;padding:0;margin:10px 0 0}li{padding:8px 4px;border-top:1px solid #e3ebe9;display:flex;gap:12px}li b{min-width:4.2em;color:#0f6b63}
+button{font:700 16px inherit;border:0;border-radius:10px;background:#0f6b63;color:#fff;padding:10px 16px}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;margin-top:12px}
+.small{font-size:13px;color:#6b827d}
+</style></head><body><div class="w">
+<div class="small">TEST · Mum and Dad's road trip · 18 to 29 November</div>
+<h1 id="h">Waiting for the first update</h1><div class="sub" id="s"></div><div class="age" id="a"></div>
+<div class="card"><svg class="map" viewBox="-60 30 1090 510">
+    <rect class="sea" x="-60" y="30" width="1090" height="510"/>
+    <polygon class="land" points="-60,30 984,30 956,85 928,160 886,285 870,358 870,396 806,416 722,438 662,460 636,476 612,504 588,478 520,474 495,466 414,514 385,502 325,478 282,476 204,448 146,342 114,278 92,236 42,236 66,172 45,112 22,150 6,214 -60,200"/>
+    <ellipse class="sea" cx="506" cy="446" rx="15" ry="13"/>
+    <ellipse class="land" cx="-6" cy="250" rx="46" ry="12"/>
+    <polyline class="route" points="943,82 841,157 679,188 506,137 319,111 224,108 98,66 76,80 100,138"/>
+    <polyline class="route" points="100,138 120,190 130,244 162,334 226,419 325,466 385,490 418,462 472,446 493,457"/>
+    <polyline class="ferry" points="493,457 499,463"/>
+    <polyline class="route" points="499,463 523,462 528,423 658,442 721,423 801,397 853,355 869,282 908,160 943,82"/>
+    <circle class="via" cx="943" cy="82" r="8"/>
+    <circle class="via" cx="76" cy="80" r="5"/>
+    <circle class="via" cx="385" cy="490" r="5"/>
+    <circle class="via" cx="506" cy="137" r="3.5"/>
+    <circle class="via" cx="150" cy="300" r="3.5"/>
+    <g data-n="1"><circle class="night" cx="679" cy="188" r="11"/><text class="num" x="679" y="193">1</text></g>
+    <g data-n="2"><circle class="night" cx="319" cy="111" r="11"/><text class="num" x="319" y="116">2</text></g>
+    <g data-n="3"><circle class="night" cx="100" cy="138" r="11"/><text class="num" x="100" y="143">3</text></g>
+    <g data-n="4"><circle class="night" cx="226" cy="419" r="11"/><text class="num" x="226" y="424">4</text></g>
+    <g data-n="5"><circle class="night" cx="468" cy="444" r="11"/><text class="num" x="468" y="449">5</text></g>
+    <g data-n="6"><circle class="night" cx="527" cy="466" r="11"/><text class="num" x="527" y="471">6</text></g>
+    <g data-n="7"><circle class="night" cx="530" cy="421" r="13"/><text class="num" x="530" y="426" style="font-size:11px">7–9</text></g>
+    <g data-n="10"><circle class="night" cx="721" cy="423" r="11"/><text class="num" x="721" y="428" style="font-size:12px">10</text></g>
+    <g data-n="11"><circle class="night" cx="869" cy="282" r="11"/><text class="num" x="869" y="287" style="font-size:12px">11</text></g>
+    <text class="lbl" x="932" y="68" text-anchor="end">Sydney</text>
+    <text class="lbl" x="319" y="92" text-anchor="middle">Mildura</text>
+    <text class="lbl" x="64" y="70" text-anchor="end">Clare</text>
+    <text class="lbl" x="118" y="143">Barossa</text>
+    <text class="lbl" x="244" y="414">Mount Gambier</text>
+    <text class="lbl" x="385" y="518" text-anchor="middle">Twelve Apostles</text>
+    <text class="lbl" x="452" y="432" text-anchor="end">Geelong</text>
+    <text class="lbl" x="550" y="416">Melbourne</text>
+    <text class="lbl" x="546" y="484">Mornington Peninsula</text>
+    <text class="lbl" x="721" y="452" text-anchor="middle">Lakes Entrance</text>
+    <text class="lbl" x="886" y="287">Narooma</text>
+    <text class="lbl" x="679" y="218" text-anchor="middle">Wagga Wagga</text>
+    <text class="lbl minor" x="506" y="158" text-anchor="middle">Hay</text>
+    <text class="lbl minor" x="136" y="304" text-anchor="end">Coorong</text>
+    
+  <g id="mk" style="display:none"><circle class="ring" r="12"/><circle class="dot" r="9"/><text x="16" y="-12">Mum &amp; Dad</text></g></svg></div>
+<div class="row"><button id="r">Refresh now</button><span class="small">Checks by itself every minute. Updates arrive when they tap a step in the app, or when the app sees them arrive, and only while the tablet has internet.</span></div>
+<div class="card" style="margin-top:12px"><b>Recent updates</b><ul id="l"><li>None yet.</li></ul></div>
+<p class="small">The marker uses the tablet's GPS when it has it; otherwise it sits on the last stop they ticked. Updates are kept by the relay for about 12 hours; this page remembers the last one it saw.</p>
+</div><script>
+(function(){var TOPIC="triptest-nj8fl72wlflksore46",D=[{"n": "1", "stops": [{"lat": null, "lng": null}, {"lat": -34.754, "lng": 149.719}, {"lat": -35.001, "lng": 148.11}, {"lat": -35.1207, "lng": 147.3779}, {"lat": -35.129, "lng": 147.36}, {"lat": -35.1, "lng": 147.367}]}, {"n": "2", "stops": [{"lat": null, "lng": null}, {"lat": -34.747, "lng": 146.551}, {"lat": -34.509, "lng": 144.843}, {"lat": -34.637, "lng": 143.561}, {"lat": -34.19, "lng": 142.16}, {"lat": -34.181, "lng": 142.165}]}, {"n": "3", "stops": [{"lat": null, "lng": null}, {"lat": -34.1754, "lng": 140.7455}, {"lat": -33.845, "lng": 138.5724}, {"lat": -33.8359, "lng": 138.6142}, {"lat": -34.503522, "lng": 138.982716}, {"lat": -34.5253, "lng": 138.9584}, {"lat": -34.5126, "lng": 138.9759}, {"lat": -34.525, "lng": 138.9593}]}, {"n": "4", "stops": [{"lat": null, "lng": null}, {"lat": -35.688, "lng": 139.338}, {"lat": -36.0357, "lng": 139.5681}, {"lat": -36.831, "lng": 139.854}, {"lat": -37.163, "lng": 139.756}, {"lat": -37.829, "lng": 140.782}, {"lat": -37.846, "lng": 140.778}, {"lat": -37.829, "lng": 140.782}, {"lat": -37.836, "lng": 140.803}]}, {"n": "5", "stops": [{"lat": -37.846, "lng": 140.778}, {"lat": -38.385, "lng": 142.237}, {"lat": -38.58, "lng": 142.83}, {"lat": -38.621, "lng": 142.932}, {"lat": -38.619, "lng": 142.996}, {"lat": -38.647, "lng": 143.07}, {"lat": -38.664, "lng": 143.104}, {"lat": -38.147, "lng": 144.361}]}, {"n": "6", "stops": [{"lat": -38.144, "lng": 144.363}, {"lat": -38.266, "lng": 144.668}, {"lat": null, "lng": null}, {"lat": -38.339, "lng": 144.741}, {"lat": -38.3445, "lng": 145.1006}, {"lat": null, "lng": null}, {"lat": null, "lng": null}]}, {"n": "7", "stops": [{"lat": -38.3445, "lng": 145.1006}, {"lat": -38.354, "lng": 144.951}, {"lat": -38.3627, "lng": 145.0502}, {"lat": -37.8744, "lng": 145.1668}]}, {"n": "8", "stops": []}, {"n": "9", "stops": []}, {"n": "10", "stops": [{"lat": null, "lng": null}, {"lat": -38.204, "lng": 146.062}, {"lat": -38.106, "lng": 147.068}, {"lat": -37.881, "lng": 147.981}]}, {"n": "11", "stops": [{"lat": null, "lng": null}, {"lat": -37.566, "lng": 149.15}, {"lat": -37.065, "lng": 149.9}, {"lat": -36.313, "lng": 150.073}, {"lat": -36.218, "lng": 150.132}]}, {"n": "12", "stops": [{"lat": null, "lng": null}, {"lat": -35.316, "lng": 150.436}, {"lat": -34.775, "lng": 150.697}, {"lat": null, "lng": null}]}],$=function(i){return document.getElementById(i)};
+function xy(lat,lng){return[943+(lng-151.21)*68.95,82+(-33.87-lat)*85.1]}
+function parse(m){var c=(m.click||'').split('#')[1];if(!c)return null;var f=c.split(',');return{di:+f[0],i:+f[1],arr:f[2]==='1',lat:f[3]===''?null:+f[3],lng:f[4]===''?null:+f[4],t:+f[5]||m.time,gps:f[6]==='1',ping:f[7]==='1',title:m.title||'',msg:m.message||''}}
+function show(list){var last=list[list.length-1];if(!last)return;
+ try{localStorage.setItem('fam-'+TOPIC,JSON.stringify(list.slice(-25)))}catch(e){}
+ $('h').textContent=last.title;$('s').textContent=last.msg+(last.gps?' · GPS position':' · position from the last stop ticked');
+ var mins=Math.round((Date.now()/1000-last.t)/60),ago=mins<1?'just now':mins<90?mins+' min ago':Math.round(mins/60)+' hours ago';
+ $('a').innerHTML='Last update '+ago+' ('+new Date(last.t*1000).toLocaleString('en-AU',{weekday:'short',hour:'numeric',minute:'2-digit'})+')'+(mins>120?' <span class="stale">· no update for a while: the tablet may be closed or out of signal</span>':'');
+ var d=D[last.di],st=d&&d.stops[last.i],lat=last.lat,lng=last.lng;
+ if(lat==null&&st&&st.lat!=null){lat=st.lat;lng=st.lng}
+ var mk=$('mk');if(lat!=null){var p=xy(lat,lng);mk.setAttribute('transform','translate('+p[0].toFixed(1)+','+p[1].toFixed(1)+')');mk.style.display=''}
+ document.querySelectorAll('g[data-n]').forEach(function(g){var n=+g.getAttribute('data-n');g.querySelector('circle').classList.toggle('done',d&&n<+d.n)});
+ var h='';list.filter(function(e){return!e.ping}).slice(-12).reverse().forEach(function(e){h+='<li><b>'+new Date(e.t*1000).toLocaleTimeString('en-AU',{hour:'numeric',minute:'2-digit'})+'</b><span>'+e.title.replace(/[<&]/g,'')+'</span></li>'});
+ $('l').innerHTML=h||'<li>None yet.</li>'}
+function load(){fetch('https://ntfy.sh/'+TOPIC+'/json?poll=1&since=12h',{cache:'no-store'}).then(function(r){return r.text()}).then(function(t){
+  var list=[];t.split('\n').forEach(function(x){if(!x)return;try{var m=JSON.parse(x);if(m.event==='message'){var e=parse(m);if(e)list.push(e)}}catch(e){}});
+  list.sort(function(a,b){return a.t-b.t});
+  if(!list.length){try{list=JSON.parse(localStorage.getItem('fam-'+TOPIC)||'[]')}catch(e){}}
+  show(list)}).catch(function(){try{show(JSON.parse(localStorage.getItem('fam-'+TOPIC)||'[]'))}catch(e){}})}
+$('r').onclick=load;load();setInterval(load,60000);
+})();
+</script></body></html>
