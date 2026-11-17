@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>TEST · Where are they</title>
+<meta name="robots" content="noindex,nofollow"><title>TEST · Trip Map</title>
 <style>
 body{margin:0;font:17px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;background:#f4f7f6;color:#17302c}
 .w{max-width:1000px;margin:0 auto;padding:16px}
@@ -14,6 +14,7 @@ svg{display:block;width:100%;height:auto}
 .night.done{fill:#8fb8b1}.num{fill:#fff;font:700 13px sans-serif;text-anchor:middle}.via{fill:#17302c}
 .lbl{fill:#17302c;font:600 15px sans-serif}.lbl.minor{fill:#6b827d;font-weight:500;font-size:13px}
 #mk circle.dot{fill:#d9480f;stroke:#fff;stroke-width:3}#mk circle.ring{fill:none;stroke:#d9480f;stroke-width:3;opacity:.7;animation:p 1.8s ease-out infinite;transform-origin:center;transform-box:fill-box}
+.tr{fill:#d9480f;opacity:.55}
 #mk text{font:700 17px sans-serif;fill:#d9480f;paint-order:stroke;stroke:#fff;stroke-width:5px}
 @keyframes p{from{transform:scale(.6);opacity:.9}to{transform:scale(2.6);opacity:0}}
 ul{list-style:none;padding:0;margin:10px 0 0}li{padding:8px 4px;border-top:1px solid #e3ebe9;display:flex;gap:12px}li b{min-width:4.2em;color:#0f6b63}
@@ -21,7 +22,7 @@ button{font:700 16px inherit;border:0;border-radius:10px;background:#0f6b63;colo
 .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;margin-top:12px}
 .small{font-size:13px;color:#6b827d}
 </style></head><body><div class="w">
-<div class="small">TEST · Mum and Dad's road trip · 18 to 29 November</div>
+<div class="small">TEST · Trip Map · Mum and Dad's road trip · 18 to 29 November</div>
 <h1 id="h">Waiting for the first update</h1><div class="sub" id="s"></div><div class="age" id="a"></div>
 <div class="card"><svg class="map" viewBox="-60 30 1090 510">
     <rect class="sea" x="-60" y="30" width="1090" height="510"/>
@@ -76,6 +77,9 @@ function show(list){var last=list[list.length-1];if(!last)return;
  $('a').innerHTML='Last update '+ago+' ('+new Date(last.t*1000).toLocaleString('en-AU',{weekday:'short',hour:'numeric',minute:'2-digit'})+')'+(mins>120?' <span class="stale">· no update for a while: the tablet may be closed or out of signal</span>':'');
  var d=D[last.di],st=d&&d.stops[last.i],lat=last.lat,lng=last.lng;
  if(lat==null&&st&&st.lat!=null){lat=st.lat;lng=st.lng}
+ document.querySelectorAll('.tr').forEach(function(c){c.remove()});
+ list.forEach(function(e){if(e.ping||e.lat==null||!e.arr)return;var q=xy(e.lat,e.lng),c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+  c.setAttribute('class','tr');c.setAttribute('r','5');c.setAttribute('cx',q[0].toFixed(1));c.setAttribute('cy',q[1].toFixed(1));$('mk').parentNode.insertBefore(c,$('mk'))});
  var mk=$('mk');if(lat!=null){var p=xy(lat,lng);mk.setAttribute('transform','translate('+p[0].toFixed(1)+','+p[1].toFixed(1)+')');mk.style.display=''}
  document.querySelectorAll('g[data-n]').forEach(function(g){var n=+g.getAttribute('data-n');g.querySelector('circle').classList.toggle('done',d&&n<+d.n)});
  var h='';list.filter(function(e){return!e.ping}).slice(-12).reverse().forEach(function(e){h+='<li><b>'+new Date(e.t*1000).toLocaleTimeString('en-AU',{hour:'numeric',minute:'2-digit'})+'</b><span>'+e.title.replace(/[<&]/g,'')+'</span></li>'});
