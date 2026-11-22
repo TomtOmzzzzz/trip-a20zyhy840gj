@@ -1,4 +1,4 @@
-const P='trip-',V=P+'21Nov1055',F=P+'fonts';
+const P='trip-',V=P+'22Nov1159',F=P+'fonts';
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(['./','manifest.webmanifest','icon-192.png','icon-512.png'].map(x=>new Request(x,{cache:'reload'})))).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x.indexOf(P)===0&&x!==V&&x!==F).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
 /* a weak connection must never leave a blank screen: the saved copy is shown if the network has not delivered the whole file in 3 seconds */
